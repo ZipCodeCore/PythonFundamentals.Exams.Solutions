@@ -27,3 +27,27 @@ class ConverterTest(unittest.TestCase):
         for feet_in, expected in test_cases:
             with self.subTest(f"{feet_in} -> {expected}"):
                 self.assertEqual(expected, converter.feet_to_meters(feet_in))
+
+    def test_kilometer_to_miles(self):
+        test_cases = [
+            (1, 0.62),
+            (5, 3.11),
+            (10, 6.21),
+            (42, 26.1)
+        ]
+
+        for kilometer_in, expected in test_cases:
+            with self.subTest(f"{kilometer_in} -> {expected}"):
+                self.assertEqual(expected, converter.kilometer_to_miles(kilometer_in))
+
+    def test_miles_to_kilometers(self):
+        test_cases = [
+            (1, 1.61),
+            (3, 4.83),
+            (26.2, 42.16),
+            (55, 88.51),
+        ]
+
+        for mile_in, expected in test_cases:
+            with self.subTest(f"{mile_in} -> {expected}"):
+                self.assertEqual(expected, converter.miles_to_kilometers(mile_in))
