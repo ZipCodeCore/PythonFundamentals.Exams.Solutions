@@ -1,5 +1,5 @@
 import unittest
-import converter
+from exam1 import converter
 
 
 class ConverterTest(unittest.TestCase):
