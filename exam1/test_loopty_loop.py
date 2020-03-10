@@ -3,7 +3,7 @@ from exam1 import loopty_loop
 
 
 class LooptyLoopTest(unittest.TestCase):
-    def test_generate_list_of_odds(self):
+    def test_generate_list(self):
         test_cases = [
             ((1, 5, 1), [1, 2, 3, 4]),
             ((15, 22, 2), [15, 17, 19, 21]),

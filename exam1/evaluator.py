@@ -1,6 +1,7 @@
-from typing import List, TypeVar
+from typing import List, Tuple, TypeVar
 
 N = TypeVar('N', int, float)
+C = TypeVar('C', List, Tuple)
 
 
 def find_lowest_value(list_in: List[N]) -> N:
@@ -8,7 +9,7 @@ def find_lowest_value(list_in: List[N]) -> N:
     Returns the lowest value in a list of numbers.
 
     :param list_in: A list of numbers (integers and/or floats)
-    :return: The lowest number in the list.
+    :return: The lowest number in the list
     """
     list_in.sort()
     return list_in[0]
@@ -19,10 +20,26 @@ def find_highest_value(list_in: List[N]) -> N:
     Returns the highest value in a list of numbers.
 
     :param list_in: A list of numbers (integers and/or floats)
-    :return: The highest number in the list.
+    :return: The highest number in the list
     """
     list_in.sort()
     return list_in[-1]
+
+
+def find_value(value_to_find, values: C) -> int:
+    """
+    This function evaluates whether a value exists within a List or a Set.
+    If the value exists, the function returns the index of the value in the collection.
+    If the value does not exist, the function returns -1.
+
+    :param value_to_find: A value that may or may not exist within a collection.
+    :param values: A List or a Set.
+    :return: an integer. Either the index where the value exists or -1
+    """
+    if value_to_find not in values:
+        return -1
+    else:
+        return values.index(value_to_find)
 
 
 def compare_two_numbers(a: N, b: N) -> int:

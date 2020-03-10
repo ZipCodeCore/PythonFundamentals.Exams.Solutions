@@ -28,6 +28,19 @@ class EvaluatorTest(unittest.TestCase):
             with self.subTest(f"{case} -> {expected}"):
                 self.assertEqual(expected, evaluator.find_highest_value(case))
 
+    def test_find_value(self):
+        test_cases =[
+            (3, [1, 2, 3, 4, 5], 2),
+            ('a', ['a', 'e', 'i', 'o', 'u'], 0),
+            (False, (True, True, True), -1),
+        ]
+
+        for case in test_cases:
+            with self.subTest(f"{case}"):
+                expected = case[2]
+                actual = evaluator.find_value(case[0], case[1])
+                self.assertEqual(expected, actual)
+
     def test_compare_two_numbers(self):
         test_cases = [
             ([2, 2], 0),
