@@ -38,3 +38,14 @@ Open the program called *gregorian_cal_utils.py*
 ```
 python3 -m unittest gregorian_cal_utils.py 
 ```
+
+## Exercise 4
+
+Open the program called *loopty_loop.py*
+
+* Remove the line containing the pass statement and implement the functionality described in the docstring.
+* Run the unit tests to validate that the implementation passes unit tests. 
+
+```
+python3 -m unittest loopty_loop.py 
+```

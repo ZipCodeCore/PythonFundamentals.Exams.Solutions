@@ -13,6 +13,6 @@ class GregorianCalendarUtilsTest(unittest.TestCase):
             (2020, True),   # divisible by 4 but not 100
         ]
 
-        for data_in, data_out in test_cases:
-            with self.subTest(f"{data_in} -> {data_out}"):
-                self.assertEqual(data_out, gregorian_cal_utils.is_leap_year(data_in))
+        for case, expected in test_cases:
+            with self.subTest(f"{case} -> {expected}"):
+                self.assertEqual(expected, gregorian_cal_utils.is_leap_year(case))
