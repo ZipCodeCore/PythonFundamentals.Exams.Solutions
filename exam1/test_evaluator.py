@@ -62,3 +62,28 @@ class EvaluatorTest(unittest.TestCase):
         for case, expected in test_cases:
             with self.subTest(f"{case} -> {expected}"):
                 self.assertEqual(expected, evaluator.compare_two_numbers(*case))
+
+    def test_find_common(self):
+        test_cases = [
+            ((1, 2, 3), (2, 4, 6), {2}),
+            (('a', 'b', 'c'), ('b', 'c', 'd'), {'b', 'c'}),
+            (('bob', 'lisa'), ('jack', 'joe'), set()),
+            ((True, True), (False, False, True), {True})
+        ]
+
+        for case in test_cases:
+            with self.subTest(f"{case}"):
+                expected = case[2]
+                actual = evaluator.find_common(case[0], case[1])
+                self.assertEqual(expected, actual)
+
+    def test_find_duplicates(self):
+        test_cases = [
+            [('a', 'b', 'b', 'c', 'a'), ['a', 'b']],
+            [(1, 3, 5, 7, 1, 3, 3), [1, 3]],
+        ]
+
+        for case, expected in test_cases:
+            with self.subTest(f"{case} -> {expected}"):
+                actual = evaluator.find_duplicates(case)
+                self.assertEqual(expected, actual)

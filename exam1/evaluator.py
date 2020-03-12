@@ -1,4 +1,4 @@
-from typing import List, Tuple, TypeVar
+from typing import List, Tuple, Set, TypeVar
 
 N = TypeVar('N', int, float)
 C = TypeVar('C', List, Tuple)
@@ -75,3 +75,28 @@ def compare_two_strings(a: str, b: str) -> int:
     :return: an integer 0, 1, or -1
     """
     compare_two_numbers(len(a), len(b))
+
+
+def find_common(tuple_a: Tuple, tuple_b: Tuple) -> Set:
+    """
+    Given two tuples, this function returns a set containing items common in both tuples.
+
+    :param tuple_a: The first tuple.
+    :param tuple_b: The second tuple.
+    :return: A set containing items common on both tuples.
+    """
+    return set(tuple_a).intersection(tuple_b)
+
+
+def find_duplicates(tuple_in: Tuple) -> List:
+    """
+    Given a tuple, this function returns a list of the items that contain more than one instance.
+
+    :param tuple_in: A tuple
+    :return: a A list containing duplicate items in the tuple_in parameter
+    """
+    result = []
+    for i in tuple_in:
+        if tuple_in.count(i) > 1 and i not in result:
+            result.append(i)
+    return result
