@@ -6,7 +6,7 @@ Open the program called *converter.py*
 * Run the unit tests to validate that the implementation passes unit tests. 
 
 ```
-python3 -m unittest converter.py 
+python3 -m unittest exam1.test_converter
 ```
 
 ## Exercise 2
@@ -17,7 +17,7 @@ Open the program called *evaluator.py*
 * Run the unit tests to validate that the implementation passes unit tests. 
 
 ```
-python3 -m unittest evaluator.py 
+python3 -m unittest exam1.test_evaluator
 ```
 
 ## Exercise 3 
@@ -36,7 +36,7 @@ Open the program called *gregorian_cal_utils.py*
 * Run the unit tests to validate that the implementation passes unit tests. 
 
 ```
-python3 -m unittest gregorian_cal_utils.py 
+python3 -m unittest exam1.test_gregorian_cal_utils
 ```
 
 ## Exercise 4
@@ -47,5 +47,5 @@ Open the program called *loopty_loop.py*
 * Run the unit tests to validate that the implementation passes unit tests. 
 
 ```
-python3 -m unittest loopty_loop.py 
+python3 -m unittest exam1.test_loopty_loop
 ```
